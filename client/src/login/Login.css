@@ -1,0 +1,20 @@
+body {
+    background-image: url('../../imgs/corna_transplante5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #565353;
+}
+
+.login-title {
+    color: #555555;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.login-link-font {
+    font-size: 12px;
+}
