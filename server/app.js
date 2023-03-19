@@ -30,7 +30,7 @@ app.use('/users', usersRouter);
 // Iniciar o servidor
 var port = 8080
 app.listen(port, () => {
-    console.log('Serviver running at ' + port);
+    console.log('Server running at ' + port);
 });
 
 module.exports = app;
