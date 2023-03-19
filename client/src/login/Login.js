@@ -1,35 +1,36 @@
 import React, {useState} from 'react';
 import './Login.css';
-import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:8080/users/check-user/', {
+        fetch('http://localhost:8080/users/check-user', {
             method: 'POST',
             body: JSON.stringify({
                 username: username,
                 password: password
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             }
         }).then(response => {
             if (response.ok) {
-                toast.success('Autenticação bem-sucedida!');
+                setErrorMessage();
+                alert('Autenticação bem-sucedida!');
             } else {
                 response.json().then(json => {
-                    toast.error(json.message);
+                    setErrorMessage(json.message);
                 });
             }
         }).catch(error => {
-            toast.error('Ocorreu um erro no processo de autenticação!' + error.message);
-            console.error(error);
+            setErrorMessage('Ocorreu um erro no processo de autenticação!');
+            console.log(error.message)
         });
     };
 
@@ -40,6 +41,9 @@ function Login() {
                 <div className="col-sm-8 col-md-6 col-lg-4">
                     <form className="bg-light p-4 shadow rounded" onSubmit={handleSubmit}>
                         <h4 className="text-center mb-4">Iniciar Sessão</h4>
+
+                        {errorMessage && <div className="my-3 text-danger text-center">{errorMessage}</div>}
+
                         <div className="form-group">
                             <label htmlFor="username">Utilizador</label>
                             <input type="username" className="form-control" id="login-username"
