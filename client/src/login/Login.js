@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
+//import {useHistory} from 'react-router-dom';
 import './Login.css';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    //const history = useHistory();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -23,6 +25,7 @@ function Login() {
             if (response.ok) {
                 setErrorMessage();
                 alert('Autenticação bem-sucedida!');
+                // history.push('/home');
             } else {
                 response.json().then(json => {
                     setErrorMessage(json.message);
