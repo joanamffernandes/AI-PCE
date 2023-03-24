@@ -5,6 +5,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Login from './pages/login/Login';
 import Home from "./pages/home/Home";
+import PassRecovery from './pages/PassRecovery';
 
 
 export default function App() {
@@ -14,6 +15,8 @@ export default function App() {
                 <Route path="/" element={<Login/>}>
                 </Route>
                 <Route path="/home" element={<Home/>}>
+                </Route>
+                <Route path="/passrecovery" element={<PassRecovery/>}>
                 </Route>
             </Routes>
         </BrowserRouter>
