@@ -9,6 +9,7 @@ import {AuthProvider} from './pages/AuthContext';
 import ProtectedRoute from "./pages/ProtectedRoute";
 import PassRecovery from './pages/PassRecovery';
 import NotFound from "./pages/NotFound";
+import Composition from "./pages/composition/Composition";
 
 function App() {
     return (
@@ -22,8 +23,8 @@ function App() {
                     <Route exact path='/home' element={<ProtectedRoute/>}>
                         <Route exact path='/home' element={<Home/>}/>
                     </Route>
-                    <Route path="/passrecovery" element={<PassRecovery/>}>
-                    </Route>
+                    <Route path="/passrecovery" element={<PassRecovery/>}/>
+                    <Route path="/composition" element={<Composition/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </AuthProvider>
