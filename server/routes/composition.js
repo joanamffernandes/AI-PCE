@@ -9,14 +9,14 @@ router.get("/list/", async (req, res) => {
 })
 
 router.post('/save', async (req, res, next) => {
-
-    const response = await CompositionController.newComposition(req.body.erh_id, req.body.composition)
+    const id = req.body.erh_id;
+    const response = await CompositionController.newComposition(id, req.body.composition)
     if (response.success) {
-        res.status(200).json({success: true, message: "Composition " + req.params.id + " criada com sucesso!"});
+        res.status(200).json({success: true, response: "Composition " + id + " criada com sucesso!"});
     } else {
         res.status(200).json({
             success: false,
-            message: "Erro a criar a composition " + req.params.id + ". Motivo: " + response.response
+            response: "Erro a criar a composition " + id + ". Motivo: " + response.response
         });
     }
 
