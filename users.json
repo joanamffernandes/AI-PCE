@@ -1,0 +1,37 @@
+[{
+  "_id": 1,
+  "username": "adm",
+  "password": "Password1",
+  "first_name": "Administrator",
+  "last_name": "",
+  "email": "",
+  "blocked": 0,
+  "active": 1
+},{
+  "_id": 2,
+  "username": "cvmota",
+  "password": "123",
+  "first_name": "Conceição",
+  "last_name": "Mota",
+  "email": "pg51210@alunos.uminho.pt",
+  "blocked": 0,
+  "active": 1
+},{
+  "_id": 3,
+  "username": "joana",
+  "password": "123",
+  "first_name": "Joana",
+  "last_name": "Fernandes",
+  "email": "pg51210@alunos.uminho.pt",
+  "blocked": 0,
+  "active": 1
+},{
+  "_id": 4,
+  "username": "lameira",
+  "password": "123",
+  "first_name": "Diogo",
+  "last_name": "Lameira",
+  "email": "pg51210@alunos.uminho.pt",
+  "blocked": 0,
+  "active": 1
+}]

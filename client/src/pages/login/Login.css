@@ -15,9 +15,15 @@
 }
 
 .login-title {
-    color: #555555;
-    font-weight: bold;
     font-size: 3rem;
+  /*
+    background: linear-gradient(45deg, rgb(0, 149, 255), #004c8f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(52, 111, 148);
+    color: #555555;
+    */
+    color: rgb(52, 111, 148);
 }
 
 .login-link-font {
