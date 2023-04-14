@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Login from './pages/login/Login';
-import Home from "./pages/home/Home";
-import {AuthProvider} from './pages/AuthContext';
-import ProtectedRoute from "./pages/ProtectedRoute";
-import PassRecovery from './pages/PassRecovery';
-import NotFound from "./pages/NotFound";
-import Composition from "./pages/composition/Composition";
+import Login from './components/login/Login';
+import Home from "./components/home/Home";
+import {AuthProvider} from './components/AuthContext';
+import ProtectedRoute from "./components/ProtectedRoute";
+import PassRecovery from './components/PassRecovery';
+import NotFound from "./components/NotFound";
+import Composition from "./components/composition/Composition";
 
 function App() {
     return (
