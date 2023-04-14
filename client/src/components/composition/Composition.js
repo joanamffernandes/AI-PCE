@@ -24,17 +24,16 @@ function Composition() {
         fetch('http://localhost:8080/composition/save', {
             method: 'POST',
             body: JSON.stringify({
-                erh_id: "erh_id2",
+                erh_id: "erh_id1",
                 composition: composition
             }),
             headers: {
                 'Content-Type': 'application/json',
             }
         }).then(response => {
-            response.json().then(json => {
+            response.json().then(data => {
                 if (response.ok) {
-                    alert("ok");
-                } else {
+                    alert(data.response);
                 }
             });
         }).catch(error => {
