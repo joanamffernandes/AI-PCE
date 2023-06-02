@@ -1,0 +1,823 @@
+{
+  "Queratopatia bolhosa OE + catarata": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "Queratoquobo": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "Queratopatia Bolhosa - OE": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "od-rejeição de enxerto": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "distrofia de fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "distrofia fuchs OE": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "distrofia endotelial congenita OD": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "falencia de enxerto": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Falencia de enxerto": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "falencia enxerto": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "queratocone od": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "queratocone": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "oe - leucomas (em enxerto previo)": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "Distorfia de Fuchs (+ catarata)": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "rejeição de enxerto": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "queratopatia bolhosa": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "catarata + dist.fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "leucoma": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "distrofia endotelial OE": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "queeatopatia bolhosa": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "queratopatia bolhosa pseudofaquica": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "OER - queratocne": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "Ectasia Corneana OE": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "rejeição enxerto de cornea": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "Falência prévia": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "DESCEMETOCELO": {
+    "code": "H18.739",
+    "text": "Descemetocele"
+  },
+  "QUERATOPATIA BOLHOSA FAQUICA": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "Perfuração corneana": {
+    "code": "H16.079",
+    "text": "Perforated corneal ulcer"
+  },
+  "MELTING DO ENXERTO": {
+    "code": "T86.849",
+    "text": "Complication of corneal transplant"
+  },
+  "leucomas": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "quearatopatia bolhosa /catarata": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "enxerto ectasiado OE": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "falencia enxerto cornea od": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "od-queratocone": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "queratocone oe": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "Falencia de enxerto de cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Falência e enxerto": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Distrofia, leucoma, endotelite": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "leucoma traumático": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "abcesso de cornea": {
+    "code": "H16.319",
+    "text": "Corneal abscess"
+  },
+  "Descompensação endotelial": {
+    "code": "H18.51",
+    "text": "Corneal endothelial "
+  },
+  "QUERATOPATIA BOLHOSA AFÁQUICA": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "DISTROFIA GRANULAR DA CÓRNEA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "perfuração ocular": {
+    "code": "H16.079",
+    "text": "Perforated corneal ulcer"
+  },
+  "úlcera de córnea": {
+    "code": "H16.009",
+    "text": "Corneal ulcer"
+  },
+  "OE- REJEIÇAO DE ENXERTO DE CORNEA": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "ABCESSO CORNEA": {
+    "code": "H16.319",
+    "text": "Corneal abscess"
+  },
+  "Leucoma pós-ulcera cornea OD": {
+    "code": "H16.009",
+    "text": "Corneal ulcer"
+  },
+  "DISTROFIA DE FUCHS (+ CATARATA)": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "Sequelas de Deiscência de Sutura": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Edema cornea": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "DISTROFIA ENDOTELIAL CORNEANA CONGÉNITA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "FALENCIA DE ENXERTO + CATARATA": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "OD- FALENCIA DE ENXERTO": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Opacificação da córnea": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "ECTASIA CORNEANA (POS-PERFURAÇAO DE DESCEMETOCELO)": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "Degenerescência marginal Pelúcida": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "falencia enxerto cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "DESCEMETOCELO PERFURADO": {
+    "code": "H18.739",
+    "text": "Descemetocele"
+  },
+  "Rejeição aguda de enxerto": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "Distrofia corneana": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "LACERAÇAO DO GLOBO INESPECIFICA": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "ULCERA DE CORNEA PERFURADA": {
+    "code": "H16.079",
+    "text": "Perforated corneal ulcer"
+  },
+  "rejeição enxerto": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "Opacificação enxerto + DR": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "rejeição de enxerto de cornea": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "Sequelas de Perfuraçao Corneana": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "QUERATOPATIA BOLHOSA (Fáquica)": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "Rjeição enxerto": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "ectasia pos lasik": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "Falencia enxerto de cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "astigmatismo elevado": {
+    "code": "H52.219",
+    "text": "Irregular astigmatism"
+  },
+  "ectasia corneana": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "rejeição transplante de cornea": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "ulcera cornea perfurada": {
+    "code": "H16.079",
+    "text": "Perforated corneal ulcer"
+  },
+  "QUERATOPATIA BOLHOSA POS-QP": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "ECTASIA DO ENXERTO": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "falencia endotelial": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "edema bolhoso corneano": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "distrofia estromal": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "Transtornos da cornea": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "falência de enxerto prévio": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "rejeição enxerto cornea": {
+    "code": "T86.840",
+    "text": "Corneal transplant rejection"
+  },
+  "falaencia de enxerto": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "DESCOMPENSÇAO CORNEANA (+ descolamento de retina)": {
+    "code": "H18.51",
+    "text": "Corneal endothelial "
+  },
+  "ceratocone": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "DISTROFIA GRANULAR": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "descematocelo": {
+    "code": "H18.739",
+    "text": "Descemetocele"
+  },
+  "LEUCOMAS POS-HERPES": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "Queratoplatia bolhosa": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "abcesso de transplante de córnea": {
+    "code": "H16.319",
+    "text": "Corneal abscess"
+  },
+  "endotelite": {
+    "code": "H18.51",
+    "text": "Corneal endothelial "
+  },
+  "ULCERA DE CORNEA + FALENCIA DE ENXERTO": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "leucoma disperso": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "QUERATOCONE (pos-hidropsia)": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "Ulcera de córnea infectada": {
+    "code": "H16.009",
+    "text": "Corneal ulcer"
+  },
+  "leucoma em enxerto prévio": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "ceratomalácia": {
+    "code": "H18.429",
+    "text": "Band keratopathy "
+  },
+  "QUERATITE INFECCIOSA": {
+    "code": "H18.429",
+    "text": "Band keratopathy "
+  },
+  "distrofia endotelial": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "fuchs + catarata": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "QUERATOPATIA BOLHOSA + ULCERA DE CORNEA": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "MELTING de enxerto prévio": {
+    "code": "T86.849",
+    "text": "Complication of corneal transplant"
+  },
+  "DISTROFIA DE FUCHS (pseudofaquica)": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "falência de enxerto prévio 99651": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "falencia transplante de cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Opacidades da córnea": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "queratopatia bolhosa pesudofaquica": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "ectasia transplante de cornea": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "queratocne": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "DISTROFIA DE FUCHS + CATARATA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "edema bolhoso pseudofaquico": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "LEUCOMAS (EM ENXERTO PRÉVIO)": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "distrofia de cornea": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "FALENCIA DO ENXERTO (DSAEK)": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Distrofia fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "DISTROFIA DE CORNEA + CATARATA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "DISTROFIA DE CORNEA GRANULAR": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "FALENCIA DE QUERATOPLASTIA PENETRANTE": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "ectasia de transplante de cornea": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "Leucoma vascularizado": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "ectsia cornea": {
+    "code": "H18.719",
+    "text": "Corneal ectasia "
+  },
+  "LEUCOMAS + DISTROFIA DE FUCHS": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "Falencia de transplante de cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "LENTICULO ENDOTELIAL ESPESSO + CATARATA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "Opacidades na cornea": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "ECTASIA POS-LASIK": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "distrofia endotelial cornea": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "FALENCIA ENXERTO (DMEK)": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Catarata + Fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "laceração cornea": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "FALENCIA/MELTING DE ENXERTO": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "ASTIGMATISMO IRREGULAR": {
+    "code": "H52.219",
+    "text": "Irregular astigmatism"
+  },
+  "LEUCOMA (POS-ABCESSO)": {
+    "code": "H16.319",
+    "text": "Corneal abscess"
+  },
+  "Opacidade central da córnea": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "LEUCOMAS (POS-HERPES)": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "distridia fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "Distrofia": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "FALENCIA ENDOTELIAL (de QP)": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "OPACIDADE CENTRAL DA CORNEA / LEUCOMA": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "falencia de transplante": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "FALENCIA ENDOTELIAL (de DSAEK)": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "queratopatia bolhsa": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "ULCERA NEUROTROFICA": {
+    "code": "H16.009",
+    "text": "Corneal ulcer"
+  },
+  "Opacidade da córnea": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "DISTROFIA DE FUCHA + CATARATA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "FALENCIA ENXERTO (FUCHS)": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "LEUCOMA + CATARATA TOTAL": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "LEUCOMA HERPETICO": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "FALENCIA ENDOTELIAL DE DSAEK": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "FALENCIA DE QP": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "falencia de transplante total": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "distrofia endotelial fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "necrose de enxerto de cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "melting cornea": {
+    "code": "T86.849",
+    "text": "Complication of corneal transplant"
+  },
+  "distrofia endotelial de fuchs": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "DISTROFIA DE FUCHS (em descompensaçao)": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "Leucoma inespecífico": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "MELTING / ULCERA NEUROTROFICA": {
+    "code": "H16.009",
+    "text": "Corneal ulcer"
+  },
+  "falencia de enserto de cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "DISTROFIA ESTROMAL DA CORNEA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "descemetocelo transplante de cornea": {
+    "code": "H18.739",
+    "text": "Descemetocele"
+  },
+  "ABCESO DE CORNEA": {
+    "code": "H16.319",
+    "text": "Corneal abscess"
+  },
+  "ECTASIA DE ENXERTO": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "edema de cornea pseudofaquico": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "ECTASIA DA CORNEA": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "bolhosa central": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "QUERATOPATIA BOLHOSA PSEUDFAQUICA": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "Falência endotelial de enxerto": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Queratopaia bolhosa": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "Falencia de tranpslante de córnea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "Falencia de enxerto cornea": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "EDEMA DE CORNEA + CATARATA": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "falencia de enxerro": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "QUERATOPATIA BOLHOSA PSEUDOFAQUICA + CATARATA": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "Leucoma corneano": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "OPACIDADE CENTRAL DA CORNEA (ENXERTO PRÉVIO)": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "edema cornea pseudofaquica": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "cornea ectasica": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "queratoocne": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "queratpatia bolhosa": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "ECTASIA DO ENXERTO + CATARATA": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "Queratopatia bolhosa psuedofáquica": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "corneo-escleromalacia": {
+    "code": "H18.739",
+    "text": "Descemetocele"
+  },
+  "queratocona": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "DISTROFIA ENDOTELIAL + CATARATA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "MELTING/DEISCENCIA DE ENXERTO": {
+    "code": "T86.849",
+    "text": "Complication of corneal transplant"
+  },
+  "distrofia cornea": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "ASTIGMATISMO ELEVADO + SIND. URRETZ ZAVALIA": {
+    "code": "H52.219",
+    "text": "Irregular astigmatism"
+  },
+  "QUERATOCONE + CATARATA": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "acantamoeba": {
+    "code": "H18.609",
+    "text": "Keratoconus"
+  },
+  "ULCERA DE CORNEA NEUROTROFICA": {
+    "code": "H16.009",
+    "text": "Corneal ulcer"
+  },
+  "DSCEMETOCELO": {
+    "code": "H18.739",
+    "text": "Descemetocele"
+  },
+  "edema de cornea": {
+    "code": "H18.20",
+    "text": "Corneal edema"
+  },
+  "Leucoma central da córnea": {
+    "code": "H17.9",
+    "text": "Corneal scar and opacity"
+  },
+  "abcesso da cornea": {
+    "code": "H16.319",
+    "text": "Corneal abscess"
+  },
+  "FALENCIA DE ENXERTO (DSAEK)": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "DISTROFIA ENDOTELIAL DA CÓRNEA + CATARATA": {
+    "code": "H18.51",
+    "text": "Corneal endothelial dystrophy"
+  },
+  "queratopatoa bolhosa": {
+    "code": "H18.10",
+    "text": "Bullous keratopathy"
+  },
+  "ectasia cornea": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "FALENCIA PRIMÁRIA DE ENXERTO": {
+    "code": "T86.841",
+    "text": "Corneal transplant failure"
+  },
+  "ULCERA DA CORNEA": {
+    "code": "H16.009",
+    "text": "Corneal ulcer"
+  },
+  "ASTIGMATISMO IRREGULAR POS-TRAUMA": {
+    "code": "H52.219",
+    "text": "Irregular astigmatism"
+  },
+  "ectasia do transplante": {
+    "code": "H18.719",
+    "text": "Corneal ectasia"
+  },
+  "": {}
+}

@@ -4,22 +4,46 @@ const CompositionController = require('../controller/composition');
 
 
 router.get("/list/", async (req, res) => {
-    const compResponse = await CompositionController.listComposition();
-    res.status(200).json(compResponse.compositions);
+    const compositionsResp = await CompositionController.listAll();
+    res.status(200).json(compositionsResp);
 })
 
-router.post('/save', async (req, res, next) => {
-    const id = req.body.erh_id;
-    const response = await CompositionController.newComposition(id, req.body.composition)
+router.get("/:id", async (req, res) => {
+    const proposal = await CompositionController.getProposal(req.params.id);
+    res.status(200).json(proposal);
+})
+
+
+router.post('/create', async (req, res, next) => {
+
+    const response = await CompositionController.newComposition(req.body.patient_id, req.body.transplants, req.body.composition);
     if (response.success) {
-        res.status(200).json({success: true, response: "Composition " + id + " criada com sucesso!"});
+        res.status(200).json({
+            success: true,
+            response: "The proposal was successfully created!"
+        });
     } else {
         res.status(200).json({
             success: false,
-            response: "Erro a criar a composition " + id + ". Motivo: " + response.response
+            response: response.response
         });
     }
-
 });
 
+router.post('/update', async (req, res, next) => {
+    const id = req.body.proposal_id;
+
+    const response = await CompositionController.updateComposition(id, req.body.patient_id, req.body.transplants, req.body.composition);
+    if (response.success) {
+        res.status(200).json({
+            success: true,
+            response: "The proposal was successfully updated!"
+        });
+    } else {
+        res.status(200).json({
+            success: false,
+            response: "Error saving the proposal. Reason:" + response.response
+        });
+    }
+});
 module.exports = router;

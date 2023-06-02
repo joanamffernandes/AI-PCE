@@ -1,0 +1,66 @@
+{
+	"items.0.0.items.0.items.0.value": "{\"blocks\":[{\"key\":\"e0s7q\",\"text\":\"${PATIENT_NAME}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.0.items.0.items.1.value": "{\"blocks\":[{\"key\":\"7vun2\",\"text\":\"${PATIENT_ID}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.0.items.0.items.2.items.0.value": "{\"blocks\":[{\"key\":\"bv9uc\",\"text\":\"${ADDRESS_LINE}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.0.items.0.items.2.items.1.value": "{\"blocks\":[{\"key\":\"2pm5p\",\"text\":\"${TOWN}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.0.items.0.items.2.items.2.value": "{\"blocks\":[{\"key\":\"822eq\",\"text\":\"${DISTRICT}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.0.items.0.items.2.items.3.value": "{\"blocks\":[{\"key\":\"ehmhq\",\"text\":\"${POSTAL_CODE}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.0.items.0.items.2.items.4.value": "{\"blocks\":[{\"key\":\"c0jao\",\"text\":\"${COUNTRY}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.0.items.0.items.3.value": {
+		"code": "${GENDER_CODE}",
+		"text": "${GENDER_TEXT}"
+	},
+	"items.0.0.items.0.items.4.value.date": "${BIRTH_DATE}",
+	"items.0.0.items.0.items.4.value.time": "${BIRTH_TIME}",
+	"items.0.1.items.1.value": [{
+		"code": "local_terms::${DIAGNOSIS_CODE}",
+		"text": "${DIAGNOSIS_TEXT}"
+	}],
+	"items.0.1.items.2.value": {
+		"code": "${PRIORITY_CODE}",
+		"description": "The request requires immediate attention.",
+		"text": "${PRIORITY_TEXT}"
+	},
+	"items.0.1.items.3.value.date": "${REGISTRATION_DATE}",
+	"items.0.1.items.3.value.time": "${REGISTRATION_TIME}",
+	"items.0.1.items.4.value.date": "${SERVICE_DUE_DATE}",
+	"items.0.1.items.4.value.time": "${SERVICE_DUE_TIME}",
+	"items.0.1.items.5.value": "{\"blocks\":[{\"key\":\"8rd0h\",\"text\":\"${SERVICE_REQUEST_COMMENT}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.1.items.6.items.0.value": "{\"blocks\":[{\"key\":\"biov\",\"text\":\"${REQUESTER}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.1.items.6.items.1.value": "{\"blocks\":[{\"key\":\"cjpb4\",\"text\":\"${REQUESTER_ID}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.2.items.1.items.0.value": "${NUMBER_OF_TRANSPLANTS}",
+	"items.0.2.items.1.items.1.value": "${ANESTHESIA}",
+	"items.0.2.items.10.value": "{\"blocks\":[{\"key\":\"48kgs\",\"text\":\"\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.2.items.2.items.1.value": {
+		"code": "${LATERALITY_CODE}",
+		"description": "Side of the body.",
+		"text": "${LATERALITY_TEXT}"
+	},
+	"items.0.2.items.3.value": [{
+		"code": "local_terms::${STATUS_CODE}",
+		"text": "${STATUS_TEXT}"
+	}],
+	"items.0.2.items.4.value": [{
+		"code": "local_terms::${DIFFICULTY_CODE}",
+		"text": "${DIFFICULTY_TEXT}"
+	}],
+	"items.0.2.items.5.value": [{
+		"code": "local_terms::${COMPLICATION_CODE}",
+		"text": "${COMPLICATION_TEXT}"
+	}],
+	"items.0.2.items.6.value.date": "${PROPOSAL_DATE}",
+	"items.0.2.items.6.value.time": "${PROPOSAL_TIME}",
+	"items.0.2.items.7.value.date": "${COMPLETION_DATE}",
+	"items.0.2.items.7.value.time": "${COMPLETION_TIME}",
+	"items.0.2.items.8.value": {
+		"code": "local_terms::${PROCEDURE_TYPE_CODE}",
+		"text": "${PROCEDURE_TYPE_TEXT}"
+	},
+	"items.0.2.items.9.value": "{\"blocks\":[{\"key\":\"b0lhi\",\"text\":\"${PROCEDURE_REASON}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.3.items.0.value.date": "${ADMISSION_DATE}",
+	"items.0.3.items.0.value.time": "${ADMISSION_TIME}",
+	"items.0.3.items.1.items.0.value": "{\"blocks\":[{\"key\":\"1it42\",\"text\":\"${DOCTER_NAME}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.3.items.1.items.1.value": "{\"blocks\":[{\"key\":\"ctupa\",\"text\":\"${DOCTER_ID}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.3.items.2.value": "{\"blocks\":[{\"key\":\"ef8ur\",\"text\":\"${OUTCOME}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}",
+	"items.0.3.items.3.value": "{\"blocks\":[{\"key\":\"aalio\",\"text\":\"${ANESTHESIA_OBS}\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}},{\"key\":\"d9dmp\",\"text\":\"\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}],\"entityMap\":{}}"
+}
