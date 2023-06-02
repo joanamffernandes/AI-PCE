@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SideBar from './SideBar';
-import ProposalList from './Home';
+import ProposalList from '../proposals/ProposalList';
 import KpiChart from '../kpi/KpiChart';
 
 function HomePage() {

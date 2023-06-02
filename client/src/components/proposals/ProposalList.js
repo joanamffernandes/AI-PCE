@@ -1,10 +1,10 @@
-import './Home.css';
+import './ProposalList.css';
 import $ from 'jquery'; // Importar o jQuery
 import 'datatables.net'; // Importar os estilos e funcionalidades do DataTables
 import 'datatables.net-dt/css/jquery.dataTables.css';
 import {useAuth} from "../AuthContext";
 import {useNavigate} from "react-router-dom";
-import {P} from '../composition/CompositionItems';
+import {P} from './composition/CompositionItems';
 import React, {useEffect, useState, useCallback} from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -19,7 +19,7 @@ import {FaPlusCircle} from "react-icons/fa";
 import {FaCheck, FaTimes} from 'react-icons/fa';
 import NotificationModal from "../notify/NotificationModal";
 
-function Home() {
+function ProposalList() {
     const {logout} = useAuth();
     const navigate = useNavigate();
     const [showError, setShowError] = useState(false);
@@ -212,4 +212,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default ProposalList;
