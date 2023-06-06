@@ -53,7 +53,7 @@ function SideBar({ handleSetActivePage, handleLogoutClick }) {
                             </li>
                             <li>
                                 <button className="link-dark rounded" onClick={handleClickWaitingTimeKpi}>
-                                    Tempo de espera
+                                    Tempo de Espera
                                 </button>
                             </li>
                             <li>
