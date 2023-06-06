@@ -43,7 +43,7 @@ async function validateTransplants(proposal_id, patient_id, transplants) {
         return {
             success: false,
             response: "O número de transplantes não é válido. O paciente já tem " + max +
-                "transplantes registrados. Por favor, insira um valor superior."
+                " transplantes registrados. Por favor, insira um valor superior."
         };
     }
     return {success: true};

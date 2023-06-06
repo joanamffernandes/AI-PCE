@@ -40,6 +40,7 @@ router.get('/transplantes/diagnostico', async (req, res) => {
         FACT_Cornea, DIM_Diagnostico
     WHERE
         FACT_Cornea.id_diagnostico = DIM_Diagnostico.id
+        and id_motivo = 2
     GROUP BY DIM_Diagnostico.descricao
     `;
     await executeQuery(query, res);
@@ -58,6 +59,7 @@ router.get('/transplantes/procedimento', async (req, res) => {
         FACT_Cornea, DIM_Tipo_Procedimento
     WHERE
         FACT_Cornea.id_tipo_prodecimento = DIM_Tipo_Procedimento.id
+        and id_motivo = 2
     GROUP BY procedimento
     `;
 
@@ -76,6 +78,7 @@ router.get('/transplantes/lateralidade', async (req, res) => {
     FROM
         FACT_Cornea, DIM_Lateralidade 
     WHERE FACT_Cornea.id_lateralidade = DIM_Lateralidade.id
+    and id_motivo = 2
     GROUP BY
         DIM_Lateralidade.descricao
     `;
@@ -95,6 +98,7 @@ router.get('/transplantes/prioridade', async (req, res) => {
     FROM
         FACT_Cornea, DIM_Prioridade 
     WHERE FACT_Cornea.id_prioridade = DIM_Prioridade.id
+    and id_motivo = 2
     GROUP BY
         DIM_Prioridade.descricao
     `;
@@ -114,6 +118,7 @@ router.get('/transplantes/anestesia', async (req, res) => {
     FROM
         FACT_Cornea, DIM_Anestesia 
     WHERE FACT_Cornea.id_anestesia = DIM_Anestesia.id
+    and id_motivo = 2
     GROUP BY
         DIM_Anestesia.descricao
     `;
@@ -133,6 +138,7 @@ router.get('/transplantes/feriados-fim-de-semana', async (req, res) => {
             SUM(CASE WHEN feriado = 'N' AND fim_semana = 'N' THEN 1 ELSE 0 END) AS total_transplantes
         FROM FACT_Cornea, DIM_Tempo
         WHERE FACT_Cornea.id_tempo = DIM_Tempo.id
+        and id_motivo = 2
         GROUP BY YEAR(DIM_Tempo.data_reg)
     `;
 
@@ -148,6 +154,7 @@ router.get('/transplantes/idade', async (req, res) => {
         SELECT idade,
             COUNT(0) AS total_transplantes
         FROM  FACT_Cornea
+        where id_motivo = 2 
         GROUP BY idade
         ORDER BY idade
     `;
@@ -185,6 +192,7 @@ router.get('/tempo-espera/transplante/mes', async (req, res) => {
         FACT_Cornea, DIM_Tempo 
     WHERE
         FACT_Cornea.id_tempo = DIM_Tempo.id
+        and id_motivo = 2
     GROUP BY
         MONTH(DIM_Tempo.data_reg),mes
     ORDER BY
@@ -208,6 +216,7 @@ router.get('/tempo-espera/transplante/diagnostico', async (req, res) => {
         FACT_Cornea, DIM_Diagnostico
     WHERE
         FACT_Cornea.id_diagnostico = DIM_Diagnostico.id
+        and id_motivo = 2
     GROUP BY diagnostico
     `;
 
@@ -215,7 +224,11 @@ router.get('/tempo-espera/transplante/diagnostico', async (req, res) => {
 });
 
 /**
- *  Rota para calcular o tempo-espera para consulta de anestesia por diagnostico
+ *  Rota para calcular o tempo médio de espera de transplantes com anestesia, por tipo de diagnostico, onde é
+ *  calculada a diferença entre:
+ * - a data de registo da proposta e a data da consulta de anestesia
+ * - a data da consulta de anestesia e a data de realização do transplante
+ * - a data de registo da proposta e data de realização do transplante (tempo total de espera)
  */
 router.get('/tempo-espera/anestesia', async (req, res) => {
 
@@ -232,6 +245,7 @@ router.get('/tempo-espera/anestesia', async (req, res) => {
         and tempo_espera_cirurgia > 0
         and tempo_espera_anestesia > 0
         and tempo_espera_anest_cir > 0
+        and id_motivo = 2
     GROUP BY diagnostico
     `;
 
@@ -240,7 +254,7 @@ router.get('/tempo-espera/anestesia', async (req, res) => {
 
 
 /**
- *  Rota para calcular o tempo-espera para consulta de anestesia por diagnostico
+ *  Rota para calcular a média de tempo total de espera por tipo de diagnostico
  */
 router.get('/tempo-espera/', async (req, res) => {
 
@@ -253,6 +267,7 @@ router.get('/tempo-espera/', async (req, res) => {
     WHERE
         FACT_Cornea.id_diagnostico = DIM_Diagnostico.id
         and tempo_espera_cirurgia > 0
+        and id_motivo = 2
     GROUP BY diagnostico
     `;
 

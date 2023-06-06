@@ -90,7 +90,7 @@ STATUS = {
     },
     'Contra indicação definitiva': {
         "code": "aborted",
-        "text": "Interrumpido"
+        "text": "Interrompido"
     },
     'Contra indicação temporária': {
         "code": "postponed",
@@ -98,7 +98,7 @@ STATUS = {
     },
     'Morte': {
         "code": "aborted",
-        "text": "Interrumpido"
+        "text": "Interrompido"
     },
 }
 

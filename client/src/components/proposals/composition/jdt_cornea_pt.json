@@ -1164,7 +1164,7 @@
                 },
                 {
                   "code": "local_terms::aborted",
-                  "text": "Interrumpido"
+                  "text": "Interrompido"
                 },
                 {
                   "code": "local_terms::completed",
