@@ -6,10 +6,8 @@ import WaitingTimeDiagnosticBarChart from "./waiting/WaitingTimeDiagnosticBarCha
 
 function WaitingTimeKpiChart() {
 
-
     const colorPalette = ['#003f5c', '#7a5195', '#ef5675', '#ffa600'];
-    const aColorPalette = ['#3d6098', '#6098cf'];
-
+    
     return (
         <div>
             <h1 className='h1'> KPIs - Tempo de Espera </h1>
