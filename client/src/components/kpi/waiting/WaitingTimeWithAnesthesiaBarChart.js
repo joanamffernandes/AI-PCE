@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
-import '../test/MyKpiChart.css';
+import '../KpiChart.css';
 
 const WaitingTimeWithAnesthesiaBarChart = ({colorPalette}) => {
     const [data, setData] = useState([]);

@@ -129,7 +129,8 @@ router.get('/transplantes/feriados-fim-de-semana', async (req, res) => {
         SELECT
             YEAR(DIM_Tempo.data_reg) AS ano,
             SUM(CASE WHEN fim_semana = 'S' THEN 1 ELSE 0 END) AS transplantes_fim_semana,
-            SUM(CASE WHEN feriado = 'S' THEN 1 ELSE 0 END) AS transplantes_feriado
+            SUM(CASE WHEN feriado = 'S' THEN 1 ELSE 0 END) AS transplantes_feriado,
+            SUM(CASE WHEN feriado = 'N' AND fim_semana = 'N' THEN 1 ELSE 0 END) AS total_transplantes
         FROM FACT_Cornea, DIM_Tempo
         WHERE FACT_Cornea.id_tempo = DIM_Tempo.id
         GROUP BY YEAR(DIM_Tempo.data_reg)

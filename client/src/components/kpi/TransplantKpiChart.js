@@ -6,6 +6,7 @@ import LateralityPieChart from "./transplants/LateralityPieChart";
 import AgeLineChart from "./transplants/AgeLineChart";
 import AnesthesiaPieChart from "./transplants/AnesthesiaPieChart";
 import PriorityPieChart from "./transplants/PriorityPieChart";
+import TransplantsOnHolidaysBarChart from "./transplants/TransplantsOnHolidaysBarChart";
 
 function TransplantKpiChart() {
 
@@ -52,6 +53,12 @@ function TransplantKpiChart() {
                     <div className="card-body">
                         <h5 className="kpi-title">Número de transplantes por Prioridade</h5>
                         <PriorityPieChart colorPalette={pColorPalette}/>
+                    </div>
+                </div>
+                <div className="kpi-chart card full-width">
+                    <div className="card-body">
+                        <h5 className="kpi-title">Número de transplantes por ano realizados ao fim de semana ou feriado</h5>
+                        <TransplantsOnHolidaysBarChart colorPalette={colorPalette}/>
                     </div>
                 </div>
             </div>
