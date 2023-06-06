@@ -2,12 +2,31 @@ const fs = require("fs");
 const path = require("path");
 const mongoose = require('mongoose');
 const express = require("express");
-const uri = "mongodb://localhost:9000/database";
 
+// ######### Mongoose #########
+const uri = "mongodb://localhost:9000/database";
 mongoose.set('strictQuery', true);
 mongoose.connect(uri)
     .then(() => console.log('Connected.'))
     .catch(() => console.log('Error connecting to MongoDB.'))
+
+// ######### MysSQL #########
+const mysql = require('mysql2');
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'cvmota',
+    database: 'dw_cornea',
+});
+connection.connect((err) => {
+    if (err) {
+        console.error('Error connecting to MySQL:', err);
+        return;
+    }
+    console.log('Connected to MySQL!');
+});
+
+// ####################################
 
 const CompositionController = require('../controller/composition');
 const template = JSON.parse(fs.readFileSync('template_composition.json'));
@@ -16,70 +35,70 @@ ANESTESIA = {0: 'Não', 1: 'Sim'}
 GENDER = {
     'Feminino': {
         "code": "at0018",
-        "text": "Female"
+        "text": "Feminino"
     },
     'Masculino': {
         "code": "at0019",
-        "text": "Male"
+        "text": "Masculino"
     }
 };
 DIFFICULTY = {
-    2: {"code": "3", "text": "High"},
-    1: {"code": "2", "text": "Medium"},
-    0: {"code": "1", "text": "Low"}
+    2: {"code": "3", "text": "Elevado"},
+    1: {"code": "2", "text": "Médio"},
+    0: {"code": "1", "text": "Baixo"}
 };
 COMPLICATION = {
-    2: {"code": "3", "text": "High"},
-    1: {"code": "2", "text": "Medium"},
-    0: {"code": "1", "text": "Low"}
+    2: {"code": "3", "text": "Elevado"},
+    1: {"code": "2", "text": "Médio"},
+    0: {"code": "1", "text": "Baixo"}
 };
 
-LATERALIDADE = {'Esquerdo': {"code": "at0003", "text": "Left"}, 'Direito': {"code": "at0004", "text": "Right"}}
+LATERALIDADE = {'Esquerdo': {"code": "at0003", "text": "Esquerdo"}, 'Direito': {"code": "at0004", "text": "Direito"}}
 PRIORITY = {
-    2: {"code": "at0136", "text": "Emergency"},
-    1: {"code": "at0137", "text": "Urgent"},
-    0: {"code": "at0138", "text": "Routine"}
+    2: {"code": "at0136", "text": "Emergente"},
+    1: {"code": "at0137", "text": "Urgente"},
+    0: {"code": "at0138", "text": "Normal"}
 };
 
 PROCEDURE_TYPE = {
     'Transplante de Córnea Lamelar Posterior (Endotelial)': {
         "code": "DMEK",
-        "text": "Descemet's Membrane Endothelial Keratoplasty (DMEK)"
+        "text": "Ceratoplastia endotelial com descamação de Descemet (DMEK)"
     },
     'Transplante de Córnea Total (Queratoplastia)': {
         "code": "DALK",
-        "text": "Deep Anterior Lamellar Keratoplasty (DALK)"
+        "text": "Queratoplastia Lamelar Anterior Profunda (DALK)"
     },
     'Transplante de Córnea Lamelar Anterior': {
         "code": "BOWMAN",
-        "text": "Deep anterior Bowman layer (BL) transplantation (BOWMAN)"
+        "text": "Transplante da camada anterior profunda de Bowman (BL)(BOWMAN)"
     },
     'Transplante de Córnea Límbico': {
         "code": "DSAEK",
-        "text": "Descemet stripping endothelial keratoplasty (DSAEK)"
+        "text": "Transplante de Córnea Lamelar Posterior (Endotelial) (DSAEK)"
     }
 };
 
 STATUS = {
     'Transplantado': {
         "code": "completed",
-        "text": "Procedure completed"
+        "text": "Concluído"
     },
     'Desistência': {
         "code": "cancelled",
-        "text": "Procedure cancelled"
+        "text": "Cancelado"
     },
     'Contra indicação definitiva': {
         "code": "aborted",
-        "text": "Procedure aborted"
+        "text": "Interrumpido"
     },
     'Contra indicação temporária': {
         "code": "postponed",
-        "text": "Procedure postponed"
+        "text": "Adiado"
     },
     'Morte': {
         "code": "aborted",
-        "text": "Procedure aborted"
+        "text": "Interrumpido"
     },
 }
 
@@ -105,11 +124,31 @@ C = {
     DES_DIAGBASE_REPL: 18,
 }
 
+
 function readfile(filename) {
     const fileRead = fs.readFileSync(path.resolve(__dirname, filename));
     lines = fileRead.toString().split('\n');
     lines.splice(0, 1);
     return lines;
+}
+
+DIAGNOSTICO_VALUES = {
+    "H16.319": "Abcesso da córnea",
+    "H18.30": "Alterações de membrana da córnea",
+    "H52.219": "Astigmatismo irregular",
+    "H18.739": "Descemetocelo",
+    "H18.51": "Distrofia endotelial da córnea",
+    "H18.719": "Ectasia da córnea",
+    "H18.20": "Edema da córnea",
+    "T86.849": "Enxerto da córnea (complicação)",
+    "T86.841": "Enxerto da córnea (falência)",
+    "T86.840": "Enxerto da córnea (rejeição)",
+    "H17.9": "Opacidade de córnea",
+    "H18.609": "Queratocone",
+    "H18.10": "Queratopatia bolhosa",
+    "H18.429": "Queratopatia em banda",
+    "H16.009": "Úlcera da córnea",
+    "H16.079": "Úlcera da córnea perfurada"
 }
 
 DIAGNOSTICO = {}
@@ -118,16 +157,83 @@ async function readDiagnostico(filename) {
     let lines = readfile(filename);
     for (let line of lines) {
         let columns = line.replace("\r", "").split(";");
-        DIAGNOSTICO[columns[3]] = {"code": columns[1], "text": columns[2]}
+        DIAGNOSTICO[columns[3]] = {"code": columns[1], "text": DIAGNOSTICO_VALUES[columns[1]]}
     }
+}
+
+let createdTable = false;
+
+function createTable(fieldList, valueList) {
+
+    if (createdTable) {
+        return;
+    }
+
+    let query = `DROP TABLE proposta`;
+    connection.query(query, (error, results) => {
+        if (error) {
+            console.error('Erro a executar a query:' + query, error);
+        } else {
+            createdTable = true;
+        }
+    });
+
+    let fields = ""
+    let size = fieldList.length;
+
+    for (let i = 0; i < fieldList.length; i++) {
+        if (valueList[i] instanceof Number) {
+            fields += "`" + fieldList[i] + "` int DEFAULT NULL";
+        } else if (valueList[i] instanceof Date) {
+            fields += "`" + fieldList[i] + "` date DEFAULT NULL";
+        } else {
+            fields += "`" + fieldList[i] + "` text";
+        }
+        if (i < size - 1) {
+            fields += ", ";
+        }
+    }
+
+    query = `CREATE TABLE IF NOT EXISTS proposta (${fields}) ENGINE = InnoDB`;
+    connection.query(query, (error, results) => {
+        if (error) {
+            console.error('Erro a executar a query:' + query, error);
+        } else {
+            createdTable = true;
+        }
+    });
+}
+
+async function insertInMySql(record) {
+
+    let fieldNameList = []
+    let valueList = []
+    for (const [key, value] of Object.entries(record)) {
+        fieldNameList.push(key);
+        valueList.push("'" + value.toString() + "'");
+    }
+
+    let fieldsName = fieldNameList.join(",")
+    let values = valueList.join(",")
+
+    await createTable(fieldNameList, valueList)
+
+    const query = `
+        INSERT INTO proposta (${fieldsName})
+        VALUES(${values})
+    `;
+    connection.query(query, (error, results) => {
+        if (error) {
+            console.error('Erro a executar a query:' + query, error);
+        }
+    });
 }
 
 async function readDoentes(filename) {
 
-    let lines = readfile(filename);
-    let id = 1;
+    const lines = readfile(filename);
+
     for (let line of lines) {
-        id++;
         let columns = line.replace("\r", "").split(";"),
             patient_id = columns[C.id_paciente],
             composition = JSON.stringify(template);
@@ -148,11 +254,12 @@ async function readDoentes(filename) {
             composition = composition.replace('${' + key + '}', value);
         }
         const proposal = await CompositionController.newComposition(patient_id, transplants, JSON.parse(composition))
-        if (!proposal.success) {
+        if (proposal.success) {
+       //     await insertInMySql(record)
+        } else {
             console.log(proposal.response);
         }
     }
-    console.log("Leitura do ficheiro " + filename + " concluída!");
 }
 
 
@@ -202,12 +309,12 @@ function generate_composition(columns, transplants) {
         ADMISSION_TIME: anestesia ? '00:00' : '',
         DOCTER_NAME: anestesia ? 'Dr.Alberto' : '',
         DOCTER_ID: anestesia ? '1724' : '',
-        OUTCOME: anestesia ? 'Outcome' : '',
-        ANESTHESIA_OBS: anestesia ? 'Anesthesia observations' : ''
+        OUTCOME: anestesia ? 'Resultado' : '',
+        ANESTHESIA_OBS: anestesia ? 'Observações de anestesia' : ''
     };
 }
 
-readDiagnostico("../../dados/diagnostico_sem_acentos.csv").then(r => console.log("End!"));
+readDiagnostico("../../dados/diagnostico_sem_acentos.csv").then(r => console.log("Ficheiro diagnostico_sem_acentos carregado!"));
 readDoentes("../../dados/doentes_cornea_cod_postal_sem_acentos.csv").then(r => console.log("End!"));
 
 

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import './Login.css';
 import {useAuth} from "../AuthContext";
+import { Link } from 'react-router-dom';
 
 
 function Login() {
@@ -13,7 +14,7 @@ function Login() {
 
     useEffect(() => {
         if (isAuthenticated) {
-            navigate('/home');
+            navigate('/homepage');
         }
     }, [isAuthenticated, navigate]);
 
@@ -37,7 +38,7 @@ function Login() {
                     // TODO: obter um token
                     // authenticate(json.data.token);
                     authenticate(username);
-                    navigate("/home");
+                    navigate("/homepage");
                 } else {
                     setErrorMessage(json.message);
                 }
@@ -80,8 +81,7 @@ function Login() {
                             <button type="submit" className="btn btn-sm btn-primary col-12 my-2">Entrar</button>
                             <div className="form-group">
                                 <small>
-                                    <button type="submit" className="btn btn-sm btn-link login-link-font">Criar conta
-                                    </button>
+                                    <Link to="/create-account" className="btn btn-sm btn-link login-link-font">Criar conta</Link>
                                 </small>
                             </div>
                         </form>

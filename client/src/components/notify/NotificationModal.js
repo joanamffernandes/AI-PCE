@@ -18,14 +18,14 @@ export default function NotificationModal({ message, isSuccess, onClose }) {
                         <span>
                             <FaCheckCircle className="text-success mr-2 ml-2" />
                         </span>
-                        <span>Success</span>
+                        <span>Sucesso</span>
                     </Modal.Title>
                 ) : (
                     <Modal.Title className="d-flex align-items-center">
                         <span>
                             <FaExclamationCircle className="text-danger mr-2 ml-2" />
                         </span>
-                        <span>Error</span>
+                        <span>Erro</span>
                     </Modal.Title>
                 )}
             </Modal.Header>

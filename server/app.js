@@ -7,11 +7,13 @@ var logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const compositionRouter = require('./routes/composition');
-
-const mongoose = require('mongoose');
-const uri = "mongodb://localhost:9000/database";
+const kpis = require('./routes/kpis')
 
 var app = express();
+
+// ###### MONGOOSE ########
+const mongoose = require('mongoose');
+const uri = "mongodb://localhost:9000/database";
 mongoose.set('strictQuery', true);
 mongoose.connect(uri)
     .then(() => console.log('Connected.'))
@@ -35,6 +37,7 @@ app.use(cors({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/composition', compositionRouter);
+app.use('/kpis', kpis);
 
 // Iniciar o servidor
 var port = 8080

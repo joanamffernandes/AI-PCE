@@ -1,38 +1,39 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import SideBar from './SideBar';
 import ProposalList from '../proposals/ProposalList';
-import KpiChart from '../kpi/KpiChart';
+import TransplantKpiChart from '../kpi/TransplantKpiChart';
+import WaitingTimeKpiChart from '../kpi/WaitingTimeKpiChart';
+import DropKpiChart from '../kpi/DropKpiChart';
+import {useAuth} from '../AuthContext';
+import './HomePage.css';
 
 function HomePage() {
     const [activePage, setActivePage] = useState('proposals');
+    const {logout} = useAuth();
 
-    const handleListProposalsClick = () => {
-        setActivePage('proposals');
-    };
-
-    const handleKpiClick = () => {
-        setActivePage('kpi');
-    };
-
-    const handleLogoutClick = () => {
-        // implementar lógica de logout aqui
+    const handleSetActivePage = (page) => {
+        setActivePage(page);
     };
 
     let content;
     if (activePage === 'proposals') {
-        content = <ProposalList />;
-    } else if (activePage === 'kpi') {
-        content = <KpiChart />;
+        content = <ProposalList/>;
+    } else if (activePage === 'transplantKpi') {
+        content = <TransplantKpiChart/>;
+    } else if (activePage === 'waitingTimeKpi') {
+        content = <WaitingTimeKpiChart/>;
+    } else if (activePage === 'dropKpi') {
+        content = <DropKpiChart/>;
     }
 
     return (
-        <div className="page">
-            <SideBar
-                onListProposalsClick={handleListProposalsClick}
-                onKpiClick={handleKpiClick}
-                onLogoutClick={handleLogoutClick}
-            />
-            <div className="content">{content}</div>
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-lg-2">
+                    <SideBar handleSetActivePage={handleSetActivePage} handleLogoutClick={logout}/>
+                </div>
+                <div className="col-lg-10 content"> {content} </div>
+            </div>
         </div>
     );
 }

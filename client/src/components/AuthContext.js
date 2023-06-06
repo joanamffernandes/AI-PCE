@@ -13,7 +13,7 @@ export function AuthProvider({children}) {
             const token = JSON.parse(tokenString);
             // verificar se já passou mais de 30 minutos deste o último login
             // caso tenha passado mais do que 30m considera o login inválido
-            return token && token.value && ((new Date() - new Date(token.login_date)) <= 30 * 60 * 1000);
+            return token && token.value && ((new Date() - new Date(token.login_date)) <= 300 * 60 * 1000);
         }
         return false;
     }

@@ -15,7 +15,7 @@ function NotFound() {
             <img className="icon" loading="lazy" src="/info_error.png" alt="Atenção"/>
             <div className="mt-4">
                 <div className="h1 title">Diagnosis: Page does not exist.</div>
-                <p class="mb-0">Unfortunately, we couldn't find the content you're looking for.<br/>Our check-up
+                <p className="mb-0">Unfortunately, we couldn't find the content you're looking for.<br/>Our check-up
                     indicates that:</p>
 
                 <div>

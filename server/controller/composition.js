@@ -42,8 +42,8 @@ async function validateTransplants(proposal_id, patient_id, transplants) {
     if (max > 0 && transplants <= max) {
         return {
             success: false,
-            response: "The number of transplants is invalid. The patient already has " + max +
-                " transplants registered, so the number of transplants must be greater than that."
+            response: "O número de transplantes não é válido. O paciente já tem " + max +
+                "transplantes registrados. Por favor, insira um valor superior."
         };
     }
     return {success: true};

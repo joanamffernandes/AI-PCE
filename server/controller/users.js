@@ -1,10 +1,16 @@
 let UserSchema = require('../model/users');
 
-module.exports.newUser = async (user_id, username, password, first_name, last_name, email) => {
+module.exports.newUser = async (username, password, first_name, last_name, email) => {
     try {
-        let user = await UserSchema({user_id, username, password, first_name, last_name, email});
+        let user = await UserSchema({
+            username: username,
+            password: password,
+            first_name: first_name,
+            last_name: last_name,
+            email: email
+        });
         let response = await user.save();
-        return {success: true, response};
+        return {success: true, response: response};
     } catch (err) {
         console.log(err);
         return {success: false, response: err}
@@ -26,5 +32,15 @@ module.exports.getByUsername = async (username) => {
     } catch (err) {
         console.log(err);
         throw new Error('Error getting username "' + username + '". Reason:  ' + err.message);
+    }
+}
+
+
+module.exports.getUserByEmail = async (email) => {
+    try {
+        return await UserSchema.findOne({email: email});
+    } catch (err) {
+        console.log(err);
+        throw new Error('Error getting email "' + email + '". Reason:  ' + err.message);
     }
 }

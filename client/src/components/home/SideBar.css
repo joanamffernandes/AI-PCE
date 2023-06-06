@@ -1,0 +1,107 @@
+.sidebar {
+    width: 280px;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar .sidebar-heading {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #025283;
+    font-weight: bold;
+}
+
+.sidebar .btn-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    color: #025283;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar .btn-toggle:focus {
+    outline: none;
+}
+
+.sidebar .collapse {
+    display: none;
+}
+
+.sidebar .collapse.show {
+    display: block;
+}
+
+.sidebar .btn-toggle-nav {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.sidebar .btn-toggle-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar .btn-toggle-nav li button {
+    display: block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    color: #025283 !important;
+    font-weight: bold;
+}
+
+.sidebar li button:hover {
+    background-color: #025283;
+    color: #ffffff !important;
+}
+
+.sidebar .sidebar-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.sidebar .btn-toggle:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #025283;
+    border-right: 2px solid #025283;
+    transform: rotate(-45deg);
+    transition: transform 0.2s;
+}
+
+.sidebar .btn-toggle.collapsed:after {
+    transform: rotate(45deg);
+}
+
+.sidebar .border-top {
+    border-top: 1px solid #ffffff;
+    margin-top: 3rem;
+}
+
+.sidebar .mb-1 {
+    margin-bottom: 1rem;
+}

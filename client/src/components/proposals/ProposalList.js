@@ -2,10 +2,9 @@ import './ProposalList.css';
 import $ from 'jquery'; // Importar o jQuery
 import 'datatables.net'; // Importar os estilos e funcionalidades do DataTables
 import 'datatables.net-dt/css/jquery.dataTables.css';
-import {useAuth} from "../AuthContext";
 import {useNavigate} from "react-router-dom";
 import {P} from './composition/CompositionItems';
-import React, {useEffect, useState, useCallback} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -15,12 +14,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {BsEye} from "react-icons/bs";
 import {BiPencil} from "react-icons/bi";
-import {FaPlusCircle} from "react-icons/fa";
-import {FaCheck, FaTimes} from 'react-icons/fa';
+import {FaCheck, FaPlusCircle, FaTimes} from "react-icons/fa";
 import NotificationModal from "../notify/NotificationModal";
 
 function ProposalList() {
-    const {logout} = useAuth();
+
     const navigate = useNavigate();
     const [showError, setShowError] = useState(false);
     const [message, setMessage] = useState("");
@@ -28,11 +26,6 @@ function ProposalList() {
     const [semDados, setSemDados] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [isDataTableLoaded, setIsDataTableLoaded] = useState(false);
-
-
-    function handleLogout() {
-        logout();
-    }
 
     const showErrorMsg = (message) => {
         setShowError(true);
@@ -92,7 +85,7 @@ function ProposalList() {
                         proposalList.push(proposal);
                     });
                     setProposals(proposalList);
-                    if (proposalList.length === 0){
+                    if (proposalList.length === 0) {
                         setSemDados(true)
                     }
                 } else {
@@ -118,7 +111,7 @@ function ProposalList() {
     useEffect(() => {
         if (semDados || (proposals.length > 0 && !isDataTableLoaded)) {
             const table = $('#proposals-table');
-            const tableDiv =$('#table-container');
+            const tableDiv = $('#table-container');
             table.DataTable().destroy();
             table.DataTable({
                 initComplete: () => {
@@ -145,7 +138,7 @@ function ProposalList() {
 
     return (
         <div className="root">
-            <h1 className="h1" style={{marginBottom: "0px"}}>Propostas de Transplante da Córnea</h1>
+            <h1 className="h1">Propostas de Transplante de Córnea</h1>
             <div className="d-flex justify-content-end mb-3">
                 <button
                     className="btn btn-sm new-proposal-btn text-white"
@@ -154,56 +147,56 @@ function ProposalList() {
                 </button>
             </div>
             <div id="table-container" className="show-table table-loading-mask">
-            <TableContainer component={Paper}>
-                <Table id="proposals-table" className="">
-                    <TableHead className="table-header">
-                        <TableRow>
-                            <TableCell style={{display: 'none'}}>Proposal</TableCell>
-                            <TableCell>Paciente</TableCell>
-                            <TableCell>Nome</TableCell>
-                            <TableCell>Data de Registro</TableCell>
-                            <TableCell>Data da Proposta</TableCell>
-                            <TableCell>Tipo de Procedimento</TableCell>
-                            <TableCell>Prioridade</TableCell>
-                            <TableCell>Anestesia</TableCell>
-                            <TableCell>Estado</TableCell>
-                            <TableCell>Data de Conclusão</TableCell>
-                            <TableCell></TableCell>
-                        </TableRow>
-                    </TableHead>
-                    {proposals.length > 0 ? (
-                        <TableBody className="table-body">
-                            {proposals.map((proposal) => (
-                                <TableRow key={proposal.id}>
-                                    <TableCell style={{display: 'none'}}>{proposal.proposal_id}</TableCell>
-                                    <TableCell>{proposal.patient_id}</TableCell>
-                                    <TableCell>{proposal.name}</TableCell>
-                                    <TableCell>{proposal.registration_date}</TableCell>
-                                    <TableCell>{proposal.proposal_date}</TableCell>
-                                    <TableCell>{proposal.procedure_type}</TableCell>
-                                    <TableCell>{proposal.priority}</TableCell>
-                                    <TableCell
-                                        className="btn-icon">{renderAnesthesiaIcon(proposal.anesthesia)}</TableCell>
-                                    <TableCell>{proposal.status}</TableCell>
-                                    <TableCell>{proposal.completion_date}</TableCell>
-                                    <TableCell>
-                                        <button className="btn btn-sm"
-                                                onClick={() => handleComposition(proposal.proposal_id, false)}>
-                                            <BsEye/>
-                                        </button>
-                                        <button className="btn btn-sm"
-                                                onClick={() => handleComposition(proposal.proposal_id, true)}>
-                                            <BiPencil/>
-                                        </button>
-                                    </TableCell>
-                                </TableRow>
-                            ))}
-                        </TableBody>
-                    ) : (
-                        <TableBody className="table-body"></TableBody>
-                    )}
-                </Table>
-            </TableContainer>
+                <TableContainer component={Paper}>
+                    <Table id="proposals-table" className="">
+                        <TableHead className="table-header">
+                            <TableRow>
+                                <TableCell style={{display: 'none'}}>Proposal</TableCell>
+                                <TableCell>Paciente</TableCell>
+                                <TableCell>Nome</TableCell>
+                                <TableCell>Data de Registro</TableCell>
+                                <TableCell>Data da Proposta</TableCell>
+                                <TableCell>Tipo de Procedimento</TableCell>
+                                <TableCell>Prioridade</TableCell>
+                                <TableCell>Anestesia</TableCell>
+                                <TableCell>Estado</TableCell>
+                                <TableCell>Data de Conclusão</TableCell>
+                                <TableCell></TableCell>
+                            </TableRow>
+                        </TableHead>
+                        {proposals.length > 0 ? (
+                            <TableBody className="table-body">
+                                {proposals.map((proposal) => (
+                                    <TableRow key={proposal.id}>
+                                        <TableCell style={{display: 'none'}}>{proposal.proposal_id}</TableCell>
+                                        <TableCell>{proposal.patient_id}</TableCell>
+                                        <TableCell>{proposal.name}</TableCell>
+                                        <TableCell>{proposal.registration_date}</TableCell>
+                                        <TableCell>{proposal.proposal_date}</TableCell>
+                                        <TableCell>{proposal.procedure_type}</TableCell>
+                                        <TableCell>{proposal.priority}</TableCell>
+                                        <TableCell
+                                            className="btn-icon">{renderAnesthesiaIcon(proposal.anesthesia)}</TableCell>
+                                        <TableCell>{proposal.status}</TableCell>
+                                        <TableCell>{proposal.completion_date}</TableCell>
+                                        <TableCell>
+                                            <button className="btn btn-sm"
+                                                    onClick={() => handleComposition(proposal.proposal_id, false)}>
+                                                <BsEye/>
+                                            </button>
+                                            <button className="btn btn-sm"
+                                                    onClick={() => handleComposition(proposal.proposal_id, true)}>
+                                                <BiPencil/>
+                                            </button>
+                                        </TableCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        ) : (
+                            <TableBody className="table-body"></TableBody>
+                        )}
+                    </Table>
+                </TableContainer>
             </div>
             {isLoading && (
                 <div className="loading-mask">
@@ -212,10 +205,6 @@ function ProposalList() {
                     </div>
                 </div>
             )}
-            <div className="mt-2">
-                <button className="btn btn-sm btn-link" style={{paddingLeft: '0px'}} onClick={handleLogout}>Logout
-                </button>
-            </div>
             {showError && (
                 <NotificationModal message={message} isSuccess={false} onClose={() => setShowError(false)}/>
             )}

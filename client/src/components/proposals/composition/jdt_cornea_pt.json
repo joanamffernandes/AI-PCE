@@ -161,7 +161,7 @@
                       "node": {
                         "code": "at0001",
                         "description": "An unstructured address line representing all relevant street-level or post-box details that would support the identification of a location.",
-                        "text": "Address line"
+                        "text": "Endereço"
                       },
                       "occurrences": {
                         "lowerOccurrences": 0,

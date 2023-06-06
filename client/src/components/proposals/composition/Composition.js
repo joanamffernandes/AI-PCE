@@ -72,45 +72,45 @@ function Composition() {
                 !!composition[P.doctor_name] ||
                 !!composition[P.doctor_id]
             )) {
-            showErrorMsg("The 'Anesthesiology Consultation' section cannot be filled without activating the Anesthesia option in the 'Transplant Details' section.");
+            showErrorMsg("A seção 'Consulta de Anestesia' não pode ser preenchida sem ativar a opção 'Anestesia' na seção 'Detalhes do Transplante'.");
             return false;
         }
 
 
         if (composition[P.anesthesia]) {
             if (admission_date && !proposal_date) {
-                showErrorMsg("It is mandatory to enter the proposal date in order to set the admission date.");
+                showErrorMsg("É obrigatório inserir a data da proposta para definir a data de admissão.");
                 return false;
             }
 
             if (registration_date && admission_date && admission_date < registration_date) {
-                showErrorMsg("The admission date cannot be earlier than the registration date. " +
-                    "<br/>Admission date: " + composition[P.admission_date] + ' ' + composition[P.admission_time] +
-                    "<br/>Registration date: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
+                showErrorMsg("A data de admissão não pode ser inferior à data de registo. " +
+                    "<br/>Data de admissão: " + composition[P.admission_date] + ' ' + composition[P.admission_time] +
+                    "<br/>Data de registro: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
                 return false;
             }
 
             if (proposal_date && admission_date && admission_date < proposal_date) {
-                showErrorMsg("The admission date cannot be earlier than the date of the proposal. " +
-                    "<br/>Admission date: " + composition[P.admission_date] + ' ' + composition[P.admission_time] +
+                showErrorMsg("A data de admissão não pode ser inferior à data da proposta. " +
+                    "<br/>Data de admissão: " + composition[P.admission_date] + ' ' + composition[P.admission_time] +
                     "<br/>Proposal date: " + composition[P.proposal_date] + ' ' + composition[P.proposal_time]);
                 return false;
             }
 
             if (completion_date && admission_date && completion_date < admission_date) {
-                showErrorMsg("The completion date cannot be earlier than the admission date." +
-                    "<br/>Completion date: " + composition[P.completion_date] + ' ' + composition[P.completion_time] +
-                    "<br/>Admission date: " + composition[P.admission_date] + ' ' + composition[P.admission_time]);
+                showErrorMsg("A data de conclusão não pode ser inferior à data de admissão." +
+                    "<br/>Data de conclusão: " + composition[P.completion_date] + ' ' + composition[P.completion_time] +
+                    "<br/>Data de admissão: " + composition[P.admission_date] + ' ' + composition[P.admission_time]);
                 return false;
             }
 
             if (admission_date && (!composition[P.doctor_name] || !composition[P.doctor_id])) {
-                showErrorMsg("The Doctor identification is mandatory when filling in the data for the anesthesia consultation.");
+                showErrorMsg("A identificação do Médico é obrigatória no preenchimento dos dados para a consulta de anestesia.");
                 return false;
             }
             if (!admission_date && (!!composition[P.doctor_name] || !!composition[P.doctor_id] ||
                 !!composition[P.anesthesiology_consultation] || !!composition[P.anesthesia_observations])) {
-                showErrorMsg("The admission date is mandatory when filling in the data for the anesthesia consultation.");
+                showErrorMsg("A data de admissão é obrigatória no preenchimento dos dados da consulta de anestesia");
                 return false;
             }
         }
@@ -128,19 +128,25 @@ function Composition() {
         let completion_date = composition[P.completion_date] ? new Date(composition[P.completion_date] + ' ' + composition[P.completion_time]) : null;
 
         if (registration_date && proposal_date && proposal_date < registration_date) {
-            showErrorMsg("The proposal date cannot be earlier than the registration date. " +
-                "<br/>Proposal date: " + composition[P.proposal_date] + ' ' + composition[P.proposal_time] +
-                "<br/>Registration date: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
+            showErrorMsg("A data da proposta não pode ser inferior à data de registro. " +
+                "<br/>Data da proposta: " + composition[P.proposal_date] + ' ' + composition[P.proposal_time] +
+                "<br/>Data de registro: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
             return false;
         }
 
         if (registration_date && completion_date && completion_date < registration_date) {
-            showErrorMsg("The completion date cannot be earlier than the registration date. " +
-                "<br/>Completion date: " + composition[P.completion_date] + ' ' + composition[P.completion_time] +
-                "<br/>Registration date: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
+            showErrorMsg("A data de conclusão não pode ser inferior à data de registro. " +
+                "<br/>Data de conclusão: " + composition[P.completion_date] + ' ' + composition[P.completion_time] +
+                "<br/>Data de registro: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
             return false;
         }
 
+        if (proposal_date && completion_date && completion_date < proposal_date) {
+            showErrorMsg("A data de conclusão não pode ser inferior à data da proposta. " +
+                "<br/>Data de conclusão: " + composition[P.completion_date] + ' ' + composition[P.completion_time] +
+                "<br/>Data da proposta: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
+            return false;
+        }
         // verificar dados de anestesia
         if (!validaAnesthesiaData(composition, registration_date, proposal_date, completion_date)) {
             return false;

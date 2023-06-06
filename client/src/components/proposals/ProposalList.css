@@ -21,17 +21,17 @@ body {
 .table-body td, .table-body th {
     line-height: 1;
     font-size: 15px;
-    padding: 2px 16px;
+    padding: 12px 0px !important;
 }
 
 .new-proposal-btn {
-    display: flex;
-    align-items: center;
-    background-color: rgb(66, 153, 225);
+    display: flex !important;
+    align-items: center !important;
+    background-color: rgb(66, 153, 225) !important;
 }
 
 .new-proposal-btn:hover{
-    background-color: rgb(99, 179, 237);
+    background-color: rgb(99, 179, 237) !important;
 }
 
 .btn-icon {

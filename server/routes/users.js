@@ -56,4 +56,28 @@ router.post('/check-user', (req, res, next) => {
     });
 });
 
+// Rota para criar uma nova conta
+router.post('/create-account', async (req, res) => {
+
+    const {username, first_name, last_name, email, password} = req.body;
+
+    let existingUser = await UserController.getByUsername(username);
+    if (existingUser) {
+        return res.status(409).json({message: 'O utilizador "' + username + '" já existe!'});
+    }
+    existingUser = await UserController.getUserByEmail(email);
+    if (existingUser) {
+        return res.status(409).json({message: 'O e-mail já está em uso.'});
+    }
+
+    // Criar uma nova conta com os dados fornecidos
+    let resp = await UserController.newUser(username, password, first_name, last_name, email)
+    if (resp.success) {
+        res.status(201).json({message: 'Conta criada com sucesso.'});
+    } else {
+        res.status(500).json({message: 'Erro a criar a nova conta. Motivo:' + resp.response});
+    }
+
+});
+
 module.exports = router;
