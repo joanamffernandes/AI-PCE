@@ -75,6 +75,7 @@ function ProposalList() {
         let status = composition[P.status];
         proposal['status'] = status ? status[0].text : null;
         proposal['completion_date'] = composition[P.completion_date];
+        proposal['procedure_type'] = composition[P.procedure_type].text;
         return proposal;
     }, []);
 
@@ -117,16 +118,19 @@ function ProposalList() {
     useEffect(() => {
         if (semDados || (proposals.length > 0 && !isDataTableLoaded)) {
             const table = $('#proposals-table');
+            const tableDiv =$('#table-container');
             table.DataTable().destroy();
             table.DataTable({
                 initComplete: () => {
                     setIsLoading(false);
                     setIsDataTableLoaded(true);
-                    $('#table-container').removeClass("show-table");
-                }
+                    tableDiv.removeClass("table-loading-mask");
+                    tableDiv.removeClass("show-table");
+                },
+                order: [[1, 'asc']] // Ordenar pelo segundo campo (patient_id) por ordem ascendente
             });
         }
-    }, [proposals, isDataTableLoaded]);
+    }, [proposals, isDataTableLoaded, semDados]);
 
 
     function renderAnesthesiaIcon(value) {
@@ -141,6 +145,7 @@ function ProposalList() {
 
     return (
         <div className="root">
+            <h1 className="h1" style={{marginBottom: "0px"}}>Propostas de Transplante da Córnea</h1>
             <div className="d-flex justify-content-end mb-3">
                 <button
                     className="btn btn-sm new-proposal-btn text-white"
@@ -148,7 +153,7 @@ function ProposalList() {
                     <FaPlusCircle/>&nbsp;&nbsp;Create
                 </button>
             </div>
-            <div id="table-container" className="show-table">
+            <div id="table-container" className="show-table table-loading-mask">
             <TableContainer component={Paper}>
                 <Table id="proposals-table" className="">
                     <TableHead className="table-header">
@@ -158,6 +163,7 @@ function ProposalList() {
                             <TableCell>Nome</TableCell>
                             <TableCell>Data de Registro</TableCell>
                             <TableCell>Data da Proposta</TableCell>
+                            <TableCell>Tipo de Procedimento</TableCell>
                             <TableCell>Prioridade</TableCell>
                             <TableCell>Anestesia</TableCell>
                             <TableCell>Estado</TableCell>
@@ -174,6 +180,7 @@ function ProposalList() {
                                     <TableCell>{proposal.name}</TableCell>
                                     <TableCell>{proposal.registration_date}</TableCell>
                                     <TableCell>{proposal.proposal_date}</TableCell>
+                                    <TableCell>{proposal.procedure_type}</TableCell>
                                     <TableCell>{proposal.priority}</TableCell>
                                     <TableCell
                                         className="btn-icon">{renderAnesthesiaIcon(proposal.anesthesia)}</TableCell>
@@ -198,15 +205,19 @@ function ProposalList() {
                 </Table>
             </TableContainer>
             </div>
+            {isLoading && (
+                <div className="loading-mask">
+                    <div className="spinner-border text-secondary" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            )}
             <div className="mt-2">
                 <button className="btn btn-sm btn-link" style={{paddingLeft: '0px'}} onClick={handleLogout}>Logout
                 </button>
             </div>
             {showError && (
                 <NotificationModal message={message} isSuccess={false} onClose={() => setShowError(false)}/>
-            )}
-            {isLoading && (
-                <div className="loading-mask">Loading...</div>
             )}
         </div>
     );
