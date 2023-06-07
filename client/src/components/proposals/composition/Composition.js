@@ -86,7 +86,7 @@ function Composition() {
             if (registration_date && admission_date && admission_date < registration_date) {
                 showErrorMsg("A data de admissão não pode ser inferior à data de registo. " +
                     "<br/>Data de admissão: " + composition[P.admission_date] + ' ' + composition[P.admission_time] +
-                    "<br/>Data de registro: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
+                    "<br/>Data de registo: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
                 return false;
             }
 
@@ -128,16 +128,16 @@ function Composition() {
         let completion_date = composition[P.completion_date] ? new Date(composition[P.completion_date] + ' ' + composition[P.completion_time]) : null;
 
         if (registration_date && proposal_date && proposal_date < registration_date) {
-            showErrorMsg("A data da proposta não pode ser inferior à data de registro. " +
+            showErrorMsg("A data da proposta não pode ser inferior à data de registo. " +
                 "<br/>Data da proposta: " + composition[P.proposal_date] + ' ' + composition[P.proposal_time] +
-                "<br/>Data de registro: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
+                "<br/>Data de registo: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
             return false;
         }
 
         if (registration_date && completion_date && completion_date < registration_date) {
-            showErrorMsg("A data de conclusão não pode ser inferior à data de registro. " +
+            showErrorMsg("A data de conclusão não pode ser inferior à data de registo. " +
                 "<br/>Data de conclusão: " + composition[P.completion_date] + ' ' + composition[P.completion_time] +
-                "<br/>Data de registro: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
+                "<br/>Data de registo: " + composition[P.registration_date] + ' ' + composition[P.registration_time]);
             return false;
         }
 

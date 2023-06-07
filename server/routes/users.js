@@ -32,7 +32,7 @@ async function isValidUser(username, password) {
 /**
  * Criar a rota "/check-user" utilizando o método POST para validar as credenciais inseridas no formulário de login.
  * Sempre que a rota "/users/check-user" é invocada, valida se o utilizador existe e se a password inserida
- * no formulário corresponde ao registro do utilizador.
+ * no formulário corresponde ao registo do utilizador.
  */
 router.post('/check-user', (req, res, next) => {
     const username = req.body.username;

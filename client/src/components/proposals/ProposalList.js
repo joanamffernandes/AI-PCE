@@ -154,7 +154,7 @@ function ProposalList() {
                                 <TableCell style={{display: 'none'}}>Proposal</TableCell>
                                 <TableCell>Paciente</TableCell>
                                 <TableCell>Nome</TableCell>
-                                <TableCell>Data de Registro</TableCell>
+                                <TableCell>Data de Registo</TableCell>
                                 <TableCell>Data da Proposta</TableCell>
                                 <TableCell>Tipo de Procedimento</TableCell>
                                 <TableCell>Prioridade</TableCell>
