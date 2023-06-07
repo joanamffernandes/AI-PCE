@@ -1,5 +1,9 @@
 .not-found-page {
-    font-size: 14px;
+    font-size: 16px;
     font-family: Arial, sans-serif;
     color: #565353;
+}
+
+.not-found-page .h1 {
+    text-align: left;
 }
